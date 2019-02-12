@@ -41,9 +41,9 @@ namespace SusiSu.Controllers
             return View();
         }
         public ActionResult SiparisOlustur(SiparisViewModel svm)
-        {
-            //var suid = svm.Su.FirstOrDefault();           
-            int id = 4;
+        {   
+            
+            int id = 11;
             var result = (from a in db.Sus
                           where a.Id == id
                           select new
@@ -67,7 +67,7 @@ namespace SusiSu.Controllers
                 db.Sipariss.Add(s);                
                 SiparisDetay sd = new SiparisDetay();
                 sd.Adet = svm.Adet;
-                sd.Fiyat = svm.Fiyat;
+                sd.Fiyat = sures.Fiyat;
                 sd.Su = sures;
                 var sid = db.Sipariss.OrderByDescending(x => x.SiparisId).FirstOrDefault().SiparisId;
                 var sipa = (from c in db.Sipariss where c.SiparisId == sid select c).FirstOrDefault();

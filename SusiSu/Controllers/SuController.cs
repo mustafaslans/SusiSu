@@ -25,12 +25,14 @@ namespace SusiSu.Controllers
                           group a by new
                           {
                               a.Boy,
-                              a.Tur
+                              a.Tur,
+                              a.Fiyat
                           } into g
                           select new ListeleViewModels()
                           {
                               Boy = g.Key.Boy,
                               Tur = g.Key.Tur,
+                              BirimFiyat = g.Key.Fiyat,
                               ToplamStok = g.Sum(t => t.StokMiktarı)
                           }).ToList();                        
             return View(result);
@@ -70,7 +72,6 @@ namespace SusiSu.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             return View(su);
         }
 

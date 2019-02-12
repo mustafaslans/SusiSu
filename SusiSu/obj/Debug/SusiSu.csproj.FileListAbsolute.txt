@@ -102,12 +102,10 @@ C:\Users\Section1\source\repos\SusiSu\SusiSu\bin\Microsoft.Owin.Security.OAuth.x
 C:\Users\Section1\source\repos\SusiSu\SusiSu\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Section1\source\repos\SusiSu\SusiSu\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Section1\source\repos\SusiSu\SusiSu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Section1\source\repos\SusiSu\SusiSu\obj\Debug\SusiSu.csprojAssemblyReference.cache
 C:\Users\Section1\source\repos\SusiSu\SusiSu\obj\Debug\SusiSu.csproj.CoreCompileInputs.cache
 C:\Users\Section1\source\repos\SusiSu\SusiSu\obj\Debug\SusiSu.csproj.CopyComplete
 C:\Users\Section1\source\repos\SusiSu\SusiSu\obj\Debug\SusiSu.dll
 C:\Users\Section1\source\repos\SusiSu\SusiSu\obj\Debug\SusiSu.pdb
-C:\Users\Section1\source\repos\SusiSu\SusiSu\obj\Debug\SusiSu.Migrations.df.resources
 C:\Users\Section1\source\repos\SusiSu\SusiSu\obj\Debug\SusiSu.csproj.GenerateResource.cache
 C:\Users\Section1\Desktop\SusiSu\SusiSu\bin\SusiSu.dll.config
 C:\Users\Section1\Desktop\SusiSu\SusiSu\bin\SusiSu.dll
@@ -439,3 +437,5 @@ C:\Users\Section1\Desktop\SusiSu\SusiSu\obj\Debug\SusiSu.Migrations.s.resources
 C:\Users\Section1\Desktop\SusiSu\SusiSu\obj\Debug\SusiSu.csproj.GenerateResource.cache
 C:\Users\Mustafa\Desktop\SusiSu\SusiSu\obj\Debug\SusiSu.Migrations.s.resources
 C:\Users\Mustafa\Desktop\SusiSu\SusiSu\obj\Debug\SusiSu.csproj.GenerateResource.cache
+C:\Users\Section1\Source\Repos\SusiSu\SusiSu\obj\Debug\SusiSu.Migrations.s.resources
+C:\Users\Section1\Source\Repos\SusiSu\SusiSu\obj\Debug\SusiSu.csprojAssemblyReference.cache

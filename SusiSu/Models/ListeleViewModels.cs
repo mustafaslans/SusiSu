@@ -11,6 +11,7 @@ namespace SusiSu.Models
     {
         public Boyut Boy { get; set; }
         public Tur Tur { get; set; }
+        public int BirimFiyat { get; set; }
         public int ToplamStok { get; set; }
         public virtual List<Su> Sus { get; set; }
     }

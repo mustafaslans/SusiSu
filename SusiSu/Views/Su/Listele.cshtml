@@ -16,6 +16,9 @@
                 @Html.DisplayNameFor(model => model.Boy)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.BirimFiyat)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.ToplamStok)
             </th>
             <th></th>
@@ -29,6 +32,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Boy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirimFiyat)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.ToplamStok)
@@ -48,7 +54,7 @@
                         <img src="~/Content/assets/img/icons/water-gallon.svg" alt="" class="svg">
                     </div>
                     <div class="single-bottle-text">
-                        <h4>10 Litre</h4>
+                        <h4>10 Litre Cam</h4>
                         @*<h4>@SusiSu.Enums.Enums.Boyut.Büyük.GetEnumDisplayName()</h4>*@
                         <h4>
                             @foreach (var item2 in Model.Where(x => x.Boy == SusiSu.Enums.Enums.Boyut.Büyük))
@@ -67,7 +73,10 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        <a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>
+                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                            Sipariş Ver
+                        </button>
                     </div>
                 </div>
             </div>
@@ -78,7 +87,7 @@
                         <img src="~/Content/assets/img/icons/big-bottle-of-water.svg" alt="" class="svg">
                     </div>
                     <div class="single-bottle-text">
-                        <h4>20 Litre</h4>
+                        <h4>20 Litre Cam</h4>
                         @*<h4>@SusiSu.Enums.Enums.Boyut.Damacana.GetEnumDisplayName()</h4>*@
                         <h4>
                             @foreach (var item3 in Model.Where(x => x.Boy == SusiSu.Enums.Enums.Boyut.Damacana))
@@ -96,7 +105,10 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        <a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>
+                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                            Sipariş Ver
+                        </button>
                     </div>
                 </div><!--/. End of single bottle deliver wrap -->
             </div><!-- /.col-->
@@ -107,7 +119,7 @@
                         <img src="~/Content/assets/img/icons/water-bottle.svg" alt="" class="svg">
                     </div>
                     <div class="single-bottle-text">
-                        <h4>1 Litre</h4>
+                        <h4>1 Litre Cam</h4>
                         @*<h4>@SusiSu.Enums.Enums.Boyut.Küçük.GetEnumDisplayName()</h4>*@
                         <h4>
                             @foreach (var item4 in Model.Where(x => x.Boy == SusiSu.Enums.Enums.Boyut.Küçük))
@@ -125,7 +137,10 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        <a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>
+                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                            Sipariş Ver
+                        </button>
                     </div>
                 </div><!-- End of single bottle deliver wrap -->
             </div><!-- /.col-->
@@ -137,7 +152,7 @@
                         <img src="~/Content/assets/img/icons/big-bottle-of-water-with-handle.svg" alt="" class="svg">
                     </div>
                     <div class="single-bottle-text">
-                        <h4>5 Litre</h4>
+                        <h4>5 Litre Cam</h4>
                         @*<h4>@SusiSu.Enums.Enums.Boyut.Orta.GetEnumDisplayName()</h4>*@
                         <h4>
                             @foreach (var item5 in Model.Where(x => x.Boy == SusiSu.Enums.Enums.Boyut.Orta))
@@ -155,11 +170,35 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        <a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>
+                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                            Sipariş Ver
+                        </button>
                     </div>
                 </div><!-- /.End of single bottle deliver wrap -->
             </div><!-- /.col-->
             <div class="col-md-6 col-lg-4"></div>
-        </div><!-- /.row-->
-    </div><!-- /.container-->
-</section><!-- /.End of bottole deliver -->
+        </div>
+    </div>   
+</section>
+
+<div class="modal fade" id="siparis" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" formaction='@Url.Action("SiparisController","SiparisOlustur")'>Sipariş Ver</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
