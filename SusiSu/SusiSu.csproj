@@ -499,6 +499,7 @@
     <Content Include="Views\Siparis\Details.cshtml" />
     <Content Include="Views\Siparis\Edit.cshtml" />
     <Content Include="Views\Siparis\Index.cshtml" />
+    <Content Include="Views\Su\PartialSiparis.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

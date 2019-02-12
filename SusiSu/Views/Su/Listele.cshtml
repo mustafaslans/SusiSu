@@ -4,7 +4,6 @@
     ViewBag.Title = "Listele";
     Layout = "~/Views/Shared/_LayoutPage2.cshtml";
 }
-
 <div class="container-fluid pt-140">
     <h2>Ürün Listesi</h2>
     <table class="table">
@@ -43,7 +42,6 @@
         }
     </table>
 </div>
-<!-- bottole deliver -->
 <section class="pt-120 pb-90 top-shape">
     <div class="container">
         <div class="row">
@@ -73,15 +71,13 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis">
                             Sipariş Ver
                         </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
-                <!-- single bottle deliver wrap -->
                 <div class="single-bottle-inner text-center">
                     <div class="bottle-image">
                         <img src="~/Content/assets/img/icons/big-bottle-of-water.svg" alt="" class="svg">
@@ -105,13 +101,12 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis">
                             Sipariş Ver
                         </button>
                     </div>
-                </div><!--/. End of single bottle deliver wrap -->
-            </div><!-- /.col-->
+                </div>
+            </div>
             <div class="col-md-6 col-lg-4">
                 <!-- single bottle deliver wrap -->
                 <div class="single-bottle-inner text-center">
@@ -120,7 +115,6 @@
                     </div>
                     <div class="single-bottle-text">
                         <h4>1 Litre Cam</h4>
-                        @*<h4>@SusiSu.Enums.Enums.Boyut.Küçük.GetEnumDisplayName()</h4>*@
                         <h4>
                             @foreach (var item4 in Model.Where(x => x.Boy == SusiSu.Enums.Enums.Boyut.Küçük))
                             {
@@ -137,23 +131,20 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis">
                             Sipariş Ver
                         </button>
                     </div>
-                </div><!-- End of single bottle deliver wrap -->
-            </div><!-- /.col-->
+                </div>
+            </div>
             <div class="col-md-6 col-lg-4"></div>
             <div class="col-md-6 col-lg-4">
-                <!-- single bottle deliver wrap -->
                 <div class="single-bottle-inner text-center">
                     <div class="bottle-image">
                         <img src="~/Content/assets/img/icons/big-bottle-of-water-with-handle.svg" alt="" class="svg">
                     </div>
                     <div class="single-bottle-text">
                         <h4>5 Litre Cam</h4>
-                        @*<h4>@SusiSu.Enums.Enums.Boyut.Orta.GetEnumDisplayName()</h4>*@
                         <h4>
                             @foreach (var item5 in Model.Where(x => x.Boy == SusiSu.Enums.Enums.Boyut.Orta))
                             {
@@ -170,35 +161,47 @@
                             }
                         </h4>
                         <p>Suşi Su</p>
-                        @*<a href='@Url.Action("Create","Siparis")'><i class="fa fa-arrow-circle-o-right"></i>Sipariş Ver</a>*@
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis" formaction="Create">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#siparis">
                             Sipariş Ver
                         </button>
                     </div>
-                </div><!-- /.End of single bottle deliver wrap -->
-            </div><!-- /.col-->
+                </div>
+            </div>
             <div class="col-md-6 col-lg-4"></div>
         </div>
-    </div>   
+    </div>
 </section>
 
 <div class="modal fade" id="siparis" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Suşi Su Sipariş</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                
+                <form>
+                    @Html.Partial("~/Views/Su/PartialSiparis.cshtml", Model)
+                </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" formaction='@Url.Action("SiparisController","SiparisOlustur")'>Sipariş Ver</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-primary">Sipariş Ver</button>
             </div>
         </div>
     </div>
+    @*<div class="modal fade" id="siparis" role="dialog" data-url='@Url.Action("PartialSiparis","Su")'></div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.btn-block').click(function () {
+                    var url = $('#siparis').data('url');
+                    $.get(url, function (data) {
+                        $("#siparis").html(data);
+                        $("#siparis").modal('show');
+                    });
+                });
+            });
+        </script>*@
 </div>

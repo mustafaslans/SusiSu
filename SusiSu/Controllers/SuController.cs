@@ -13,11 +13,20 @@ namespace SusiSu.Controllers
     public class SuController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        SiparisViewModel sv = new SiparisViewModel();
         // GET: Su
         public ActionResult Index()
         {
             return View(db.Sus.ToList());
+        }
+        public ActionResult PartialSiparis()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        public ActionResult PartialSiparis(SiparisViewModel svm)
+        {
+            return View();
         }
         public ActionResult Listele()
         {
