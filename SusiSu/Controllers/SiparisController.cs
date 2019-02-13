@@ -41,8 +41,8 @@ namespace SusiSu.Controllers
             return View();
         }
         public ActionResult SiparisOlustur(SiparisViewModel svm)
-        {   
-            
+        {
+
             int id = 11;
             var result = (from a in db.Sus
                           where a.Id == id
@@ -61,10 +61,10 @@ namespace SusiSu.Controllers
             {
                 Siparis s = new Siparis();
                 var Uid = User.Identity.GetUserId();
-                s.SiparisTarihi = DateTime.Now;            
+                s.SiparisTarihi = DateTime.Now;
                 var us = (from u in db.User where u.Id == Uid select u).FirstOrDefault();
                 s.Users = us;
-                db.Sipariss.Add(s);                
+                db.Sipariss.Add(s);
                 SiparisDetay sd = new SiparisDetay();
                 sd.Adet = svm.Adet;
                 sd.Fiyat = sures.Fiyat;
@@ -74,12 +74,9 @@ namespace SusiSu.Controllers
                 sd.Siparis = sipa;
                 db.SiparisDetays.Add(sd);
                 db.SaveChanges();
-            }          
+            }
             return RedirectToAction("Index");
         }
-
-
- 
 
         [HttpPost]
         [ValidateAntiForgeryToken]

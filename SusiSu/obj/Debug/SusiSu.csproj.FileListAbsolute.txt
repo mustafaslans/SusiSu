@@ -549,3 +549,4 @@ C:\Users\Mustafa\Source\Repos\SusiSu\SusiSu\obj\Debug\SusiSu.csproj.CoreCompileI
 C:\Users\Mustafa\Source\Repos\SusiSu\SusiSu\obj\Debug\SusiSu.csproj.CopyComplete
 C:\Users\Mustafa\Source\Repos\SusiSu\SusiSu\obj\Debug\SusiSu.dll
 C:\Users\Mustafa\Source\Repos\SusiSu\SusiSu\obj\Debug\SusiSu.pdb
+C:\Users\Mustafa\Source\Repos\SusiSu\SusiSu\obj\Debug\SusiSu.csprojAssemblyReference.cache
